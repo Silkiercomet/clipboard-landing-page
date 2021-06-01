@@ -167,6 +167,9 @@ body{
     .grid2 img{
         padding: 2rem ;
     }
+    .showcase .left{
+        margin-right: 0;
+    }
 
 }
 @media (max-width:764px){
