@@ -74,8 +74,8 @@ body{
 
 .grid1{
     display: grid;
-    min-width: 100%;
-    grid-template-columns: repeat(auto-fit,minmax(370px,1fr));
+    width: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
     margin: 3rem 1rem;
 }
 .card{
@@ -89,7 +89,7 @@ body{
 .grid2{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
     margin: 3.5rem 0;
 }
 .grid2 img{
@@ -118,6 +118,10 @@ body{
 .options > * {
     padding: 0 3rem;
 }
+.options ul li:hover{
+    cursor: pointer;
+    color: hsl(171, 66%, 44%);
+}
 .logo-2{
     align-self: center;
 }
@@ -131,13 +135,103 @@ body{
 }
 .social-media-icons ul li a{
     color: hsl(210, 10%, 33%);
+    transition: 600ms ease;
 }
+.social-media-icons ul li a:hover{
+    color: hsl(171, 77%, 47%);
+}
+
 .social-media-icons ul li:nth-child(2){
     padding: 0 1rem;
     
 }
 
 /* footer */
+
+/* media queries */
+
+@media (max-width:900px){
+    .showcase{
+        grid-template-columns: 1fr;
+    }
+    .showcase .right{
+        text-align: center;
+        justify-self: center;
+    }
+    .wrapper .showcase .left img,.wrapper img {
+        width: 100%; 
+    }
+    .grid2 img{
+        padding: 2rem ;
+    }
+
+}
+@media (max-width:764px){
+    .footer{
+        flex-direction: column;
+        height: 100%;
+        
+    }
+    .footer .options{
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .footer .options ul li{
+        text-align: center;
+    }
+    .footer .options ul{
+        margin: 0;
+        padding: 0;
+    }
+    .options > * {
+        padding: 0 ;
+    }
+    .social-media-icons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .social-media-icons ul li {
+        transform: translateX(-20px);
+        
+
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .btns .btn{
+        width: 80%;
+        margin-top: 1rem;
+    }
+    .btns .btn:nth-child(1){
+        margin-right: 0;
+    }
+    .logo-2{
+        margin: 1rem 0;
+    }
+    .intro{
+        background-image: url(images/bg-header-mobile.png);
+    }
+
+}
+@media (max-width:600px){
+    .grid1 .card img,.grid2 img{
+        width: 60%;
+    }
+    .grid1, .grid2{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* media queries */
 
 /* utilities */
 
@@ -163,6 +257,10 @@ p {
     text-decoration: none;
     color: white;
     border-radius: 2rem;
+    transition: 600ms ease;
+}
+.btn:hover{
+    opacity: 0.7;
 }
 ul{
     list-style: none;
