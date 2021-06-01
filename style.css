@@ -145,6 +145,9 @@ body{
     padding: 0 1rem;
     
 }
+.sr-only{
+    display: none;
+}
 
 /* footer */
 
@@ -159,7 +162,7 @@ body{
         justify-self: center;
     }
     .wrapper .showcase .left img,.wrapper img {
-        width: 100%; 
+        max-width: 100%; 
     }
     .grid2 img{
         padding: 2rem ;
@@ -223,7 +226,7 @@ body{
 }
 @media (max-width:600px){
     .grid1 .card img,.grid2 img{
-        width: 60%;
+        max-width: 100%;
     }
     .grid1, .grid2{
         grid-template-columns: 1fr;
